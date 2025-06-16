@@ -69,7 +69,7 @@ Bienvenue sur la Plateforme de Gestion de Projets Simplifiée ! Cette applicatio
     ```
     Créez un fichier `.env` à la racine du dossier `backend/` et ajoutez-y vos variables d'environnement :
     ```env
-    PORT=3000  # Ou un autre port si vous préférez
+    PORT=3001  
     JWT_SECRET=votre_super_secret_jwt_personnel_et_complexe
     ```
     Démarrez le serveur backend :
