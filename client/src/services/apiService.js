@@ -16,17 +16,13 @@ export const authenticatedFetch = async (url, options = {}) => {
     headers['Authorization'] = `Bearer ${token}`;
   }
 
-  // --- CORRECTION CLÉ ---
-  // L'URL passée en paramètre est maintenant utilisée ici.
-  // Auparavant, c'était écrit en dur : '/api/projets'
   const response = await fetch(url, {
     ...options,
     headers,
   });
-  // --- FIN DE LA CORRECTION ---
 
-
-  // Gestion globale des erreurs de réponse
+  // Gestion globale des erreurs de réponse (optionnel mais recommandé)
+  // Si la réponse n'est pas OK, essayer de parser le JSON pour l'erreur.
   if (!response.ok) {
     let errorData;
     try {
@@ -34,11 +30,12 @@ export const authenticatedFetch = async (url, options = {}) => {
       errorData = await response.json();
     } catch (e) {
       // Si le corps n'est pas JSON ou est vide
-      errorData = { error: `Erreur HTTP ! Statut: ${response.status} ${response.statusText}` };
+      errorData = { error: `HTTP error! status: ${response.status} ${response.statusText}` };
     }
     // Lancer une erreur pour qu'elle soit capturée par le .catch() de l'appelant
     const error = new Error(errorData.error || 'Une erreur est survenue.');
     error.status = response.status; // Attacher le statut à l'objet erreur
+    error.response = response; // Attacher la réponse complète si besoin
     throw error;
   }
 
@@ -49,3 +46,11 @@ export const authenticatedFetch = async (url, options = {}) => {
 
   return response.json(); // Parser et retourner le corps JSON
 };
+
+// Exemples d'utilisation que vous pourriez exporter si vous centralisez tous les appels API :
+// export const fetchProjects = () => authenticatedFetch('/api/projets');
+// export const createProject = (projectData) => authenticatedFetch('/api/projets', {
+//   method: 'POST',
+//   body: JSON.stringify(projectData),
+// });
+// etc.
