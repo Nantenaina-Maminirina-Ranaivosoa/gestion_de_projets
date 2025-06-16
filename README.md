@@ -58,8 +58,8 @@ Bienvenue sur la Plateforme de Gestion de Projets Simplifiée ! Cette applicatio
 
 1.  **Clonez le dépôt (si vous le partagez) :**
     ```bash
-    git clone [https://github.com/VOTRE_NOM_UTILISATEUR/NOM_DE_VOTRE_DEPOT.git](https://github.com/VOTRE_NOM_UTILISATEUR/NOM_DE_VOTRE_DEPOT.git)
-    cd NOM_DE_VOTRE_DEPOT
+    git clone [https://github.com/Nantenaina-Maminirina-Ranaivosoa/gestion_de_projets.git]
+    cd gestion_de_projets
     ```
 
 2.  **Configuration du Backend :**
@@ -77,7 +77,7 @@ Bienvenue sur la Plateforme de Gestion de Projets Simplifiée ! Cette applicatio
     npm start 
     # ou node server.js (si 'start' n'est pas défini dans package.json)
     ```
-    Le serveur devrait tourner sur `http://localhost:3000` (ou le port que vous avez défini).
+    Le serveur devrait tourner sur `http://localhost:3001`.
 
 3.  **Configuration du Frontend :**
     Ouvrez un nouveau terminal.
@@ -86,8 +86,6 @@ Bienvenue sur la Plateforme de Gestion de Projets Simplifiée ! Cette applicatio
     # (Assurez-vous d'être dans le dossier client depuis la racine du projet)
     npm install
     ```
-    (Si votre application React a besoin de connaître l'URL de l'API backend via une variable d'environnement, par exemple `REACT_APP_API_URL=http://localhost:3000/api`, vous pouvez créer un fichier `.env` dans `client/`.)
-
     Démarrez l'application React :
     ```bash
     npm start
