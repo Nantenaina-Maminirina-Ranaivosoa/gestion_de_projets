@@ -19,7 +19,7 @@ app.use(cors());
 app.use(express.json()); // Doit être placé avant la définition des routes qui en ont besoin
 
 // Définir le port d'écoute
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Clé secrète pour signer les JWT.
 const JWT_SECRET = process.env.JWT_SECRET || "votre_super_secret_jwt_a_changer";
