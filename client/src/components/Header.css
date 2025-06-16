@@ -1,0 +1,53 @@
+/* client/src/components/Header.css */
+.app-header {
+  background-color: #20232a;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Aligne le titre à gauche et la nav à droite */
+  align-items: center;
+}
+
+/* Ajout à client/src/components/Header.css */
+.header-title-link {
+  color: white;
+  text-decoration: none;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.app-header nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.app-header nav a:hover {
+  text-decoration: underline;
+}
+
+.app-header nav .logout-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em; /* Ajuster si nécessaire pour correspondre aux liens */
+  line-height: 1; /* Ajuster si nécessaire */
+}
+
+.app-header nav .logout-button:hover {
+  background-color: #c82333;
+}
+
+.user-greeting {
+  margin-left: 15px;
+  color: #f8f9fa; /* Ou une autre couleur qui contraste bien */
+  font-size: 0.9em;
+}

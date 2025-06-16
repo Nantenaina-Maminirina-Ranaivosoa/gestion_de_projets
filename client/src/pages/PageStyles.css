@@ -1,0 +1,185 @@
+/* client/src/pages/PageStyles.css */
+.page-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+.button-link:hover {
+  background-color: #0056b3;
+}
+
+
+
+.add-project-form-container {
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.add-project-form-container h3 {
+    margin-top: 0;
+}
+
+.add-project-form-inline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  align-items: end;
+}
+
+.add-project-form-inline div {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-project-form-inline label {
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.add-project-form-inline input,
+.add-project-form-inline textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+ .add-project-form-inline textarea {
+    min-height: 40px; /* ajuster la hauteur */
+ }
+
+
+.add-project-form-inline button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: fit-content; /* S'ajuste à la hauteur du contenu */
+  /* pour aligner avec les inputs */
+}
+.add-project-form-inline button:disabled {
+    background-color: #ccc;
+}
+.project-list-main-container h2 {
+    margin-top: 0;
+}
+.error-message {
+    color: red;
+    font-size: 0.9em;
+}
+
+
+/* Ajouts à client/src/pages/PageStyles.css */
+.project-detail-layout .project-header {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.project-detail-layout .project-header h2 {
+    margin-top: 0;
+    color: #0056b3;
+}
+.back-link {
+    color: #007bff;
+    text-decoration: none;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.edit-project-form div { 
+  margin-bottom: 15px;
+}
+
+.edit-project-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.edit-project-form input[type="text"],
+.edit-project-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Important pour que padding ne change pas la largeur */
+}
+
+.edit-project-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.edit-project-form .form-actions {
+  display: flex;
+  justify-content: flex-end; /* Aligner les boutons à droite */
+  gap: 10px; /* Espace entre les boutons */
+  margin-top: 20px;
+}
+
+.edit-project-form .form-actions button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-project-form .form-actions button[type="submit"] {
+  background-color: #28a745; /* Vert */
+  color: white;
+}
+.edit-project-form .form-actions button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.edit-project-form .form-actions .button-secondary {
+  background-color: #6c757d; /* Gris */
+  color: white;
+}
+.edit-project-form .form-actions .button-secondary:hover {
+  background-color: #5a6268;
+}
+
+
+.auth-form .success-message {
+  background-color: #d4edda; /* Vert clair */
+  color: #155724; /* Vert foncé */
+  border: 1px solid #c3e6cb;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* client/src/pages/PageStyles.css (ou LoginPage.css / RegisterPage.css) */
+
+
+.auth-form .field-error-message {
+  color: #dc3545; /* Rouge pour les erreurs de champ */
+  font-size: 0.8em;
+  display: block; /* Pour qu'il prenne sa propre ligne */
+  margin-top: 3px;
+}
+small.field-error-message {
+  color: #dc3545; /* Rouge pour les erreurs de champ */
+  font-size: 0.8em;
+  display: block; /* Pour qu'il prenne sa propre ligne */
+  margin-top: 3px;
+}

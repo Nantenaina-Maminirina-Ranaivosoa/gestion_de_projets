@@ -1,0 +1,109 @@
+/* client/src/components/ProjectList.css */
+.project-list-container {
+  /* Ce style n'est plus vraiment utilisé par ProjectList directement si ProjectsPage a le sien */
+  padding: 20px;
+  background-color: #f4f4f4;
+  /* Couleur de fond claire */
+  border-radius: 8px;
+  /* Coins arrondis */
+  margin: 0;
+  /* Ajusté car il est dans ProjectsPage */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  /* Légère ombre */
+}
+
+.project-list-items-container ul {
+  /* Cible la liste directement */
+  list-style-type: none;
+  padding: 0;
+}
+
+.project-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  /* Pour aligner le contenu et les actions */
+  justify-content: space-between;
+  /* Espace entre contenu et actions */
+  align-items: center;
+  /* Centrer verticalement */
+
+}
+
+.project-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.project-item h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #007bff;
+}
+
+.project-item p {
+  font-size: 0.95em;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.project-item small {
+  font-size: 0.8em;
+  color: #6c757d;
+}
+
+/* Style pour le Link */
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  /* Hérite la couleur du parent */
+  display: block;
+  /* Pour que toute la zone du li soit cliquable */
+}
+
+/* Supprimer les styles .project-item.selected, .projects-and-tasks-layout, .projects-column, .tasks-column, .select-project-prompt
+   car la logique de sélection et l'affichage des tâches ne sont plus dans ce composant */
+
+.project-item-content {
+  flex-grow: 1;
+  /* Permet au contenu de prendre l'espace disponible */
+}
+
+.project-item-actions {
+  margin-left: 15px;
+  /* Espace entre le contenu et les boutons d'action */
+  display: flex;
+  gap: 10px;
+}
+
+.project-item-actions .button-delete-project {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85em;
+}
+
+.project-item-actions .button-delete-project:hover {
+  background-color: #c82333;
+}
+
+.project-item-actions .button-edit-project {
+  background-color: #ffc107; /* Jaune */
+  color: #212529; /* Noir/gris foncé pour le texte */
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85em;
+}
+.project-item-actions .button-edit-project:hover {
+  background-color: #e0a800;
+}

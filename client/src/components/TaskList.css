@@ -1,0 +1,233 @@
+/* client/src/components/TaskList.css */
+.task-list-container {
+  padding: 0px 10px; /* Un peu moins de padding si déjà dans une colonne avec padding */
+}
+
+.task-list-container h3 {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  margin-top: 0; /* Si c'est le premier élément dans tasks-column */
+}
+
+.task-list-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  position: relative; /* Pour positionner les boutons d'action si besoin */
+}
+
+.task-item h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #343a40;
+}
+
+.task-item p {
+  font-size: 0.95em;
+  margin-bottom: 10px;
+  color: #495057;
+}
+
+.task-details {
+  font-size: 0.85em;
+  color: #6c757d;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px dashed #e0e0e0;
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+.task-status {
+  font-weight: bold;
+}
+
+/* Styles optionnels pour les différents statuts de tâches */
+.task-item.status-à-faire .task-status {
+  color: #dc3545; /* Rouge */
+}
+.task-item.status-en-cours .task-status {
+  color: #ffc107; /* Jaune */
+}
+.task-item.status-terminé .task-status {
+  color: #28a745; /* Vert */
+}
+
+.add-task-form {
+  background-color: #f0f8ff; /* Light alice blue */
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #cfe2f3;
+}
+
+.add-task-form h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #0056b3; /* Darker blue for title */
+}
+
+.add-task-form div {
+  margin-bottom: 10px;
+}
+
+.add-task-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.add-task-form input[type="text"],
+.add-task-form textarea,
+.add-task-form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #b8cce4;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 0.95em;
+}
+
+.add-task-form textarea {
+  min-height: 50px;
+  resize: vertical;
+}
+
+.add-task-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.add-task-form button:hover {
+  background-color: #0056b3;
+}
+
+.add-task-form button:disabled {
+  background-color: #b0c4de; /* Lighter blue when disabled */
+  cursor: not-allowed;
+}
+
+.error-message { /* Style déjà présent, mais s'assure qu'il est bien appliqué */
+  color: red;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.form-tasks-separator {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.task-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px; /* Espace entre les boutons */
+  padding-top: 10px;
+  border-top: 1px solid #eee; /* Séparateur visuel optionnel */
+}
+
+.task-actions button, 
+.edit-task-form .task-actions button { /* Cibler aussi les boutons dans le form d'édition */
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85em;
+  transition: background-color 0.2s;
+}
+
+.task-actions .button-edit,
+.edit-task-form .task-actions button[type="submit"] {
+  background-color: #ffc107; /* Jaune pour Modifier/Sauvegarder */
+  color: #212529;
+}
+.task-actions .button-edit:hover,
+.edit-task-form .task-actions button[type="submit"]:hover {
+  background-color: #e0a800;
+}
+
+.edit-task-form .task-actions button[type="button"] { /* Bouton Annuler */
+  background-color: #6c757d; /* Gris */
+  color: white;
+}
+.edit-task-form .task-actions button[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+
+/* Styles pour le formulaire d'édition inline */
+.edit-task-form {
+  padding: 10px 0; /* Un peu d'espace vertical */
+}
+
+.edit-task-form div {
+  margin-bottom: 8px;
+}
+
+.edit-task-form label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: normal; /* Moins d'emphase que pour le form d'ajout */
+  font-size: 0.85em;
+  color: #333;
+}
+
+.edit-task-form input[type="text"],
+.edit-task-form textarea,
+.edit-task-form select {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 0.9em;
+}
+.edit-task-form textarea {
+  min-height: 40px;
+}
+
+.edit-task-form .error-message {
+    font-size: 0.85em;
+    margin-top: 5px;
+}
+
+.task-actions .button-delete {
+  background-color: #dc3545; /* Rouge pour Supprimer */
+  color: white;
+}
+.task-actions .button-delete:hover {
+  background-color: #c82333;
+}
+.task-actions .button-delete:disabled,
+.task-actions .button-edit:disabled,
+.add-task-form button:disabled,
+.edit-task-form .task-actions button:disabled { /* Style général pour les boutons désactivés */
+  background-color: #e0e0e0 !important; /* Plus clair pour indiquer la désactivation */
+  color: #a0a0a0 !important;
+  cursor: not-allowed !important;
+}
+
+
+.task-item.deleting {
+  opacity: 0.5;
+  pointer-events: none; /* Empêche les interactions pendant la suppression */
+  border-left: 5px solid #dc3545 !important; /* Indication visuelle */
+}
